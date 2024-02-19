@@ -1,3 +1,6 @@
+.devcontainer
+.github
+
 *.egg-info/
 __pycache__/
 parsetab.py

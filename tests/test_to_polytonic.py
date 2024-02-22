@@ -5,7 +5,7 @@ from pyplgr.converter.api import to_polytonic
 class ToPolytonicTest(unittest.TestCase):
     @parameterized.expand([
         ["", ""],
-
+        # large alpha
         ["A", "Α"],
         ["A|", "ᾼ"],
         ["'A", "Ά"],
@@ -26,6 +26,7 @@ class ToPolytonicTest(unittest.TestCase):
         [">`A|", "ᾊ"],
         [">~A", "Ἆ"],
         [">~A|", "ᾎ"],
+        # large epsilon
         ["E", "Ε"],
         ["'E", "Έ"],
         ["`E", "Ὲ"],
@@ -35,6 +36,7 @@ class ToPolytonicTest(unittest.TestCase):
         [">E", "Ἐ"],
         [">'E", "Ἔ"],
         [">`E", "Ἒ"],
+        # large eta
         ["^E", "Η"],
         ["^E|", "ῌ"],
         ["'^E", "Ή"],
@@ -55,6 +57,7 @@ class ToPolytonicTest(unittest.TestCase):
         [">`^E|", "ᾚ"],
         [">~^E", "Ἦ"],
         [">~^E|", "ᾞ"],
+        # large iota
         ["I", "Ι"],
         ["'I", "Ί"],
         ["`I", "Ὶ"],
@@ -67,6 +70,7 @@ class ToPolytonicTest(unittest.TestCase):
         [">`I", "Ἲ"],
         [">~I", "Ἶ"],
         ["\"I", "Ϊ"],
+        # large omicron
         ["O", "Ο"],
         ["'O", "Ό"],
         ["`O", "Ὸ"],
@@ -76,8 +80,7 @@ class ToPolytonicTest(unittest.TestCase):
         [">O", "Ὀ"],
         [">'O", "Ὄ"],
         [">`O", "Ὂ"],
-        ["R", "Ρ"],
-        ["<R", "Ῥ"],
+        # large upsilon
         ["U", "Υ"],
         ["'U", "Ύ"],
         ["`U", "Ὺ"],
@@ -94,6 +97,7 @@ class ToPolytonicTest(unittest.TestCase):
         ["<`Y", "Ὓ"],
         ["<~Y", "Ὗ"],
         ["\"Y", "Ϋ"],
+        # large omega
         ["^O", "Ω"],
         ["^O|", "ῼ"],
         ["'^O", "Ώ"],
@@ -114,7 +118,7 @@ class ToPolytonicTest(unittest.TestCase):
         [">`^O|", "ᾪ"],
         [">~^O", "Ὦ"],
         [">~^O|", "ᾮ"],
-
+        # large consonants
         ["B", "Β"],
         ["G", "Γ"],
         ["D", "Δ"],
@@ -129,13 +133,15 @@ class ToPolytonicTest(unittest.TestCase):
         ["NX", "ΓΞ"],
         ["NKh", "ΓΧ"],
         ["X", "Ξ"],
+        ["R", "Ρ"],
+        ["<R", "Ῥ"],
         ["P", "Π"],
         ["S", "Σ"],
         ["T", "Τ"],
         ["Ph", "Φ"],
         ["Kh", "Χ"],
         ["Ps", "Ψ"],
-
+        # small alpha
         ["a", "α"],
         ["a|", "ᾳ"],
         ["'a", "ά"],
@@ -160,6 +166,7 @@ class ToPolytonicTest(unittest.TestCase):
         [">`a|", "ᾂ"],
         [">~a", "ἆ"],
         [">~a|", "ᾆ"],
+        # small epsilon
         ["e", "ε"],
         ["'e", "έ"],
         ["`e", "ὲ"],
@@ -169,6 +176,7 @@ class ToPolytonicTest(unittest.TestCase):
         [">e", "ἐ"],
         [">'e", "ἔ"],
         [">`e", "ἒ"],
+        # small eta
         ["^e", "η"],
         ["^e|", "ῃ"],
         ["'^e", "ή"],
@@ -193,6 +201,7 @@ class ToPolytonicTest(unittest.TestCase):
         [">`^e|", "ᾒ"],
         [">~^e", "ἦ"],
         [">~^e|", "ᾖ"],
+        # small iota
         ["i", "ι"],
         ["'i", "ί"],
         ["`i", "ὶ"],
@@ -209,6 +218,7 @@ class ToPolytonicTest(unittest.TestCase):
         ["\"'i", "ΐ"],
         ["\"`i", "ῒ"],
         ["\"~i", "ῗ"],
+        # small omicron
         ["o", "ο"],
         ["'o", "ό"],
         ["`o", "ὸ"],
@@ -218,9 +228,7 @@ class ToPolytonicTest(unittest.TestCase):
         [">o", "ὀ"],
         [">'o", "ὄ"],
         [">`o", "ὂ"],
-        ["r", "ρ"],
-        ["<r", "ῥ"],
-        [">r", "ῤ"],
+        # small upsilon
         ["u", "υ"],
         ["'u", "ύ"],
         ["`u", "ὺ"],
@@ -253,6 +261,7 @@ class ToPolytonicTest(unittest.TestCase):
         ["\"'y", "ΰ"],
         ["\"`y", "ῢ"],
         ["\"~y", "ῧ"],
+        # small omega
         ["^o", "ω"],
         ["^o|", "ῳ"],
         ["'^o", "ώ"],
@@ -277,11 +286,12 @@ class ToPolytonicTest(unittest.TestCase):
         [">`^o|", "ᾢ"],
         [">~^o", "ὦ"],
         [">~^o|", "ᾦ"],
-
+        # small consonants
         ["b", "β"],
         ["g", "γ"],
         ["d", "δ"],
         ["z", "ζ"],
+        ["k", "κ"],
         ["th", "θ"],
         ["k", "κ"],
         ["l", "λ"],
@@ -294,33 +304,34 @@ class ToPolytonicTest(unittest.TestCase):
         ["x", "ξ"],
         ["p", "π"],
         ["s", "ς"],
-        ["c", "σ"],
         ["sa", "σα"],
         ["ssa", "σσα"],
+        ["c", "σ"],
         ["t", "τ"],
         ["ph", "φ"],
         ["kh", "χ"],
         ["ps", "ψ"],
-
+        # punctuations
         [",", ","],
         [";", "·"],
         [".", "."],
         ["?", ";"],
         ["d'", "δ'"],
-
+        # white space
         [" ", " "],
         ["\t", "\t"],
         ["\n", "\n"],
         ["\r\n", "\r\n"],
-
-        [r"-", "-"],
-        [r"(", "("],
-        [r")", ")"],
-        [r"[", "["],
-        [r"]", "]"],
-        [r"<", "<"],
-        [r">", ">"],
-        [r"あ", "あ"],
+        # parenthesis
+        ["-", "-"],
+        ["(", "("],
+        [")", ")"],
+        ["[", "["],
+        ["]", "]"],
+        ["<", "<"],
+        [">", ">"],
+        # others
+        ["あ", "あ"],
     ])
     def test_to_polytonic(self, text, expected):
         actual = to_polytonic(text)

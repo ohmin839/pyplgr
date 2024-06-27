@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[project]
+name = "pyplgrcli"
+version = "0.0.1"
+authors = [
+  { name="ohmin839" }
+]
+description = "A text processor for texts in polytonic Greek"
+readme = "README.md"
+dependencies = [
+  "pyplgrapi @ {root:parent:uri}/pyplgrapi"
+]
+
+[project.optional-dependencies]
+test = [
+  "parameterized"
+]
+
+[project.scripts]
+pyplgrconv = "pyplgrcli.converter:main"
+pyplgrcoll = "pyplgrcli.collector:main"

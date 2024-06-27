@@ -1,6 +1,6 @@
 import unittest
 from parameterized import parameterized
-from pyplgr.converter.api import to_polytonic
+from pyplgrapi import to_polytonic
 
 class ToPolytonicTest(unittest.TestCase):
     @parameterized.expand([

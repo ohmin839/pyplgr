@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pyplgr"
+name = "pyplgrapi"
 version = "0.0.1"
 authors = [
   { name="ohmin839" }
@@ -18,7 +18,3 @@ dependencies = [
 test = [
   "parameterized"
 ]
-
-[project.scripts]
-pyplgrconv = "pyplgr.converter.cli:main"
-pyplgrcoll = "pyplgr.collector.cli:main"

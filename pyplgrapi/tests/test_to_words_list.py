@@ -1,6 +1,6 @@
 import unittest
 from parameterized import parameterized
-from pyplgr.collector.api import to_words_list
+from pyplgrapi import to_words_list
 
 class ToWordsList(unittest.TestCase):
     @parameterized.expand([

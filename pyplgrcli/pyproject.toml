@@ -19,7 +19,7 @@ dependencies = [
 
 [project.optional-dependencies]
 test = [
-  "parameterized"
+  "pytest"
 ]
 
 [project.scripts]

@@ -2,7 +2,7 @@
 `pyplgrapi` provides some APIs as functions.
 
 ## Conversion API
-`to_polytonic` method converts an ASCII string into a string in polytonic Greek.
+`to_polytonic` function converts an ASCII string into a string in polytonic Greek.
 ```python
 from pyplgrapi import to_polytonic
 
@@ -11,7 +11,7 @@ print(converted) # ἄνθρωπος
 ```
 
 ## Collection API
-`to_words_list` method splits a text in polytonic Greek into words:
+`to_words_list` function splits a text in polytonic Greek into words:
 ```python
 from pyplgrapi import to_words_list
 

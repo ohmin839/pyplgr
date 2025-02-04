@@ -1,5 +1,5 @@
 import pytest
-from pyplgrapi import to_polytonic
+from pyplgrcore.api import to_polytonic
 
 @pytest.mark.parametrize(
     [

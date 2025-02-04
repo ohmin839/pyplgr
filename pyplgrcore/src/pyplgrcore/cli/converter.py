@@ -1,6 +1,6 @@
 import sys
 
-from pyplgrapi import to_polytonic
+from pyplgrcore.api import to_polytonic
 
 def main():
     for line in sys.stdin:

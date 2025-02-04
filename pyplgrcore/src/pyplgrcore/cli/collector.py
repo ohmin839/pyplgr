@@ -1,5 +1,5 @@
 import sys
-from pyplgrapi import to_words_list
+from pyplgrcore.api import to_words_list
 
 def main():
     for line in sys.stdin:

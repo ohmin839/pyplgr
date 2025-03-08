@@ -11,7 +11,8 @@ authors = [
 description = "A text processor for texts in polytonic Greek"
 readme = "README.md"
 dependencies = [
-  "parsimonious"
+  "parsimonious",
+  "ordered-set"
 ]
 
 [project.optional-dependencies]

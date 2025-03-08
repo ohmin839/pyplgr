@@ -1,11 +1,11 @@
-# pyplgrcore
-`pyplgrcore` provides some APIs and CLIs.
+# pyplgr-core
+`pyplgr-core` provides some APIs and CLIs.
 
 ## API
 - `to_polytonic` function converts ASCII strings into strings in polytonic Greek.
 - `to_words_list` function splits texts in polytonic Greek into words.
 ```python
-from pyplgrcore.api import to_polytonic, to_words_list
+from pyplgr_core.api import to_polytonic, to_words_list
 
 converted = to_polytonic("<o >'anthr^op'os tis")
 print(converted) # ὁ ἄνθρωπός τις
@@ -26,7 +26,7 @@ $ echo "<o >'anthr^op'os tis" | pyplgrconv
 ### pyplgrcoll
 `pyplgrcoll` command extracts words uniquely from texts in polytonic Greek.
 ```bash
-$ cat alpha.txt | pyplgrconv | pyplgrcoll
+$ head -n1 alpha.txt | pyplgrconv | pyplgrcoll
 Πάντες
 ἄνθρωποι
 τοῦ
@@ -35,5 +35,4 @@ $ cat alpha.txt | pyplgrconv | pyplgrcoll
 φύσει
 σημεῖον
 δ'
-...
 ```

@@ -1,5 +1,5 @@
 import pytest
-from pyplgrcore.api import to_words_list
+from pyplgr_core.api import to_words_list
 
 @pytest.mark.parametrize(
     [

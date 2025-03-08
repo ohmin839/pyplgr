@@ -1,7 +1,7 @@
 import sys
 from ordered_set import OrderedSet
 
-from pyplgrcore.api import to_words_list
+from ..api import to_words_list
 
 def main():
     words_set = OrderedSet() 

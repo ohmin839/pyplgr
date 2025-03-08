@@ -3,4 +3,4 @@
 This is a work in progress.
 
 ## Components
-- [`pyplgrcore`](./pyplgrcore/README.md)
+- [`pyplgr-core`](./pyplgr-core/README.md)
